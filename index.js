@@ -13,7 +13,6 @@ function shoppingIteamCounterUp(counter) {
         number++
         return $(counter).value = number++;
     }
-
 }
 
 // Counter Down 
@@ -28,10 +27,7 @@ function shoppingIteamCounterDown(counter) {
 
 //  Counter function  stop for every product 
 
-
-
-
-// counter and priceup  and down for first product
+// counter and price up  and down for first product
 
 let price = $("priceOne").innerText;
 
@@ -43,6 +39,7 @@ $("plusBtn").addEventListener('click', function() {
     var totalValueOfPrice = price * totalIteamNumber;
     $("priceOne").innerText = totalValueOfPrice;
 
+
 });
 $("minusBtn").addEventListener('click', function() {
 
@@ -51,4 +48,29 @@ $("minusBtn").addEventListener('click', function() {
     let totalIteamNumber = $("iteams").value;
     var totalValueOfPrice = price * totalIteamNumber;
     $("priceOne").innerText = totalValueOfPrice;
+});
+
+
+
+// counter and price   up  and down for second  product
+
+let pricetwo = $("itemTwoVlue").innerText;
+
+$("secondPluseBtn").addEventListener('click', function() {
+
+    shoppingIteamCounterUp("itemTwo")
+
+    let totalIteamTwoNumber = $("itemTwo").value;
+    var totalValueOfPriceTwo = pricetwo * totalIteamTwoNumber;
+    $("itemTwoVlue").innerText = totalValueOfPriceTwo;
+
+
+});
+$("secondMinusBtn").addEventListener('click', function() {
+
+    shoppingIteamCounterDown("itemTwo")
+
+    let totalIteamTwoNumber = $("itemTwo").value;
+    var totalValueOfPriceTwo = pricetwo * totalIteamTwoNumber;
+    $("itemTwoVlue").innerText = totalValueOfPriceTwo;
 });
