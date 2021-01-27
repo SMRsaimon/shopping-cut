@@ -30,47 +30,85 @@ function shoppingIteamCounterDown(counter) {
 // counter and price up  and down for first product
 
 let price = $("priceOne").innerText;
+price = parseFloat(price)
+
+
 
 $("plusBtn").addEventListener('click', function() {
 
     shoppingIteamCounterUp("iteams")
 
     let totalIteamNumber = $("iteams").value;
-    var totalValueOfPrice = price * totalIteamNumber;
+    totalIteamNumber = parseFloat(totalIteamNumber)
+    let totalValueOfPrice = price * totalIteamNumber;
     $("priceOne").innerText = totalValueOfPrice;
 
+    // subTotal Price 
+    let iteamTV = $("itemTwoVlue").innerText;
+    iteamTV = parseFloat(iteamTV)
+    $("subTotal").innerText = totalValueOfPrice + iteamTV;
 
 });
+
+
 $("minusBtn").addEventListener('click', function() {
 
     shoppingIteamCounterDown("iteams")
 
-    let totalIteamNumber = $("iteams").value;
-    var totalValueOfPrice = price * totalIteamNumber;
+    totalIteamNumber = $("iteams").value;
+    totalValueOfPrice = price * totalIteamNumber;
     $("priceOne").innerText = totalValueOfPrice;
+
+
+
+    // subTotal Price 
+    let iteamTV = $("itemTwoVlue").innerText;
+    iteamTV = parseFloat(iteamTV)
+    $("subTotal").innerText = totalValueOfPrice + iteamTV;
+
 });
+
+
 
 
 
 // counter and price   up  and down for second  product
 
 let pricetwo = $("itemTwoVlue").innerText;
+pricetwo = parseFloat(pricetwo)
 
 $("secondPluseBtn").addEventListener('click', function() {
 
     shoppingIteamCounterUp("itemTwo")
 
     let totalIteamTwoNumber = $("itemTwo").value;
+    totalIteamTwoNumber = parseFloat(totalIteamTwoNumber)
     var totalValueOfPriceTwo = pricetwo * totalIteamTwoNumber;
+
     $("itemTwoVlue").innerText = totalValueOfPriceTwo;
 
 
+
+    // subTotal Price 
+    let priceOne = $("priceOne").innerText;
+    priceOne = parseFloat(priceOne)
+    $("subTotal").innerText = totalValueOfPriceTwo + priceOne;
+
 });
+
+
 $("secondMinusBtn").addEventListener('click', function() {
 
     shoppingIteamCounterDown("itemTwo")
 
-    let totalIteamTwoNumber = $("itemTwo").value;
-    var totalValueOfPriceTwo = pricetwo * totalIteamTwoNumber;
+    totalIteamTwoNumber = $("itemTwo").value;
+    totalValueOfPriceTwo = pricetwo * totalIteamTwoNumber;
     $("itemTwoVlue").innerText = totalValueOfPriceTwo;
+
+
+    // subTotal Price 
+    let priceOne = $("priceOne").innerText;
+    priceOne = parseFloat(priceOne)
+    $("subTotal").innerText = totalValueOfPriceTwo + priceOne;
+
 });
