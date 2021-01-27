@@ -4,6 +4,8 @@ function $(select) {
     return document.getElementById(select);
 }
 
+
+
 //  Counter function  start for every product 
 // conterUP
 function shoppingIteamCounterUp(counter) {
@@ -47,6 +49,11 @@ $("plusBtn").addEventListener('click', function() {
     let iteamTV = $("itemTwoVlue").innerText;
     iteamTV = parseFloat(iteamTV)
     $("subTotal").innerText = totalValueOfPrice + iteamTV;
+    // inTotal Price 
+
+    $("inTotal").innerText = totalValueOfPrice + iteamTV;
+
+
 
 });
 
@@ -60,12 +67,13 @@ $("minusBtn").addEventListener('click', function() {
     $("priceOne").innerText = totalValueOfPrice;
 
 
-
     // subTotal Price 
     let iteamTV = $("itemTwoVlue").innerText;
     iteamTV = parseFloat(iteamTV)
     $("subTotal").innerText = totalValueOfPrice + iteamTV;
 
+    // InTotal price 
+    $("inTotal").innerText = totalValueOfPrice + iteamTV;
 });
 
 
@@ -87,12 +95,13 @@ $("secondPluseBtn").addEventListener('click', function() {
 
     $("itemTwoVlue").innerText = totalValueOfPriceTwo;
 
-
-
     // subTotal Price 
     let priceOne = $("priceOne").innerText;
     priceOne = parseFloat(priceOne)
     $("subTotal").innerText = totalValueOfPriceTwo + priceOne;
+
+    // intotal Price 
+    $("inTotal").innerText = totalValueOfPriceTwo + priceOne;
 
 });
 
@@ -105,10 +114,12 @@ $("secondMinusBtn").addEventListener('click', function() {
     totalValueOfPriceTwo = pricetwo * totalIteamTwoNumber;
     $("itemTwoVlue").innerText = totalValueOfPriceTwo;
 
-
     // subTotal Price 
     let priceOne = $("priceOne").innerText;
     priceOne = parseFloat(priceOne)
     $("subTotal").innerText = totalValueOfPriceTwo + priceOne;
+
+    // Intotal price 
+    $("inTotal").innerText = totalValueOfPriceTwo + priceOne;
 
 });
